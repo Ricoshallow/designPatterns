@@ -52,6 +52,7 @@ function StockPriceAPIProxy() {
     }
 }
 
+// -------------------------------------------------------------------------
 //测试
 const api = new StockPriceAPIProxy();
 api.getValue('google', (price) => { console.log(price) });
