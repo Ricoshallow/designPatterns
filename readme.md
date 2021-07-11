@@ -45,3 +45,23 @@
 
     - 提供一致的遍历各种数据结构的方式，而不用了解数据的内部结构
     - 提供遍历容器（集合）的能力而无需改变容器的接口
+
+- 观察者模式（Observer Pattern）
+
+    观察者模式又称发布订阅模式（Publish/Subscribe Pattern）。被观察对象（subject）维护一组观察者（observer），当被观察对象状态改变时，通过调用观察者的某个方法将这些变化通知到观察者。三要素：
+
+    - subscribe(): 接收一个观察者observer对象，使其订阅自己
+    - unsubscribe(): 接收一个观察者observer对象，使其取消订阅自己
+    - fire(): 触发事件，通知到所有观察者
+
+- 中介者模式（Mediator Pattern）
+
+    在中介者模式中，中介者（Mediator）包装了一系列对象相互作用的方式，使得这些对象不必直接相互作用，而是由中介者协调它们之间的交互，从而使它们可以松散偶合。当某些对象之间的作用发生改变时，不会立即影响其他的一些对象之间的作用，保证这些作用可以彼此独立的变化。
+
+- 访问者模式（Visitor Pattern）
+
+    访问者模式是一种将算法与对象结构分离的设计模式，通俗点讲就是：访问者模式让我们能够在不改变一个对象结构的前提下能够给该对象增加新的逻辑，新增的逻辑保存在一个独立的访问者对象中.要素:
+    - Visitor Object：访问者对象，拥有一个 visit() 方法
+    - Receiving Object：接收对象，拥有一个 accept() 方法
+    - visit(receivingObj)：用于Visitor接收一个Receiving Object
+    - accept(visitor)：用于Receving Object接收一个Visitor，并通过调用Visitor的 visit() 为其提供获取Receiving Object数据的能力
